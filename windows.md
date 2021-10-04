@@ -947,7 +947,7 @@ When the installation is finished, run:
 node -v
 ```
 
-:heavy_check_mark: If you see `v14.15`, the installation succeeded :+1:
+:heavy_check_mark: If you see `v14.15.5`, the installation succeeded :+1:
 
 :x: If not, **contact a teacher**
 
