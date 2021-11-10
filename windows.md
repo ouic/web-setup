@@ -575,7 +575,7 @@ To be sure that you can interact with your browser installed on Windows from you
   Run the command:
 
   ```bash
-    ls /mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe
+    ls /mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe
   ```
 
   If you get an error like `ls: cannot access...` Run the following command:
