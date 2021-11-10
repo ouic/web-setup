@@ -627,7 +627,7 @@ To be sure that you can interact with your browser installed on Windows from you
   ```
 </details>
 
-Restart your terminal.
+⚠️ Restart your terminal.
 
 Then please make sure that the following command returns "Browser defined 👌":
 
