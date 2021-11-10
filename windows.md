@@ -597,13 +597,13 @@ To be sure that you can interact with your browser installed on Windows from you
   Run the command:
 
   ```bash
-    ls /mnt/c/Program\ Files\ \(x86\)/Mozilla\ Firefox/firefox.exe
+  ls /mnt/c/Program\ Files\ \(x86\)/Mozilla\ Firefox/firefox.exe
   ```
 
   If you get an error like `ls: cannot access...` Run the following command:
 
   ```bash
-    echo "export BROWSER='\"/mnt/c/Program Files/Mozilla Firefox/firefox.exe\"'" >> ~/.zshrc
+  echo "export BROWSER='\"/mnt/c/Program Files/Mozilla Firefox/firefox.exe\"'" >> ~/.zshrc
   ```
 
   Else run:
@@ -631,9 +631,7 @@ Then please make sure that the following command returns "Browser defined 👌":
 [ -z "$BROWSER" ] && echo "ERROR: please define a BROWSER environment variable ⚠️" || echo "Browser defined 👌"
 ```
 
-If it does not,
-
-:heavy_check_mark: If you got this message, you can continue :+1:
+:heavy_check_mark: If yes, you can continue :+1:
 
 :x: If not, choose a browser in the list above and execute the corresponding command. Then don't forget to close your terminal and open it again. Do not hesitate to **contact a teacher**.
 
