@@ -916,6 +916,13 @@ rm -rf ~/.gemrc
 
 Rerun the command to install the gems.
 
+Check if rails is correctly installed :
+
+```bash
+rails -v
+```
+:heavy_check_mark: If you get `Rails 6.1.4.1`, then all good :+1:
+
 :warning: **NEVER** install a gem with `sudo gem install`! Even if you stumble upon a Stackoverflow answer (or the terminal) telling you to do so.
 
 
