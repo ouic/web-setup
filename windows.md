@@ -575,24 +575,8 @@ To be sure that you can interact with your browser installed on Windows from you
   Run the command:
 
   ```bash
-    ls /mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe
+  ls /mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe
   ```
-
-  <details>
-    <summary>If you get an error like `ls: cannot access...` </summary>
-    
-    Run the following command:
-    
-    ```bash
-      echo "export BROWSER='\"/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe\"'" >> ~/.zshrc
-    ```
-
-    Else run:
-
-    ```bash
-      echo "export BROWSER='\"/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe\"'" >> ~/.zshrc
-    ```
-  </details>
 </details>
 
 <details>
@@ -624,6 +608,22 @@ To be sure that you can interact with your browser installed on Windows from you
 
   ```bash
   echo "export BROWSER='\"/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe\"'" >> ~/.zshrc
+  ```
+</details>
+
+<details>
+  <summary>If you get an error like `ls: cannot access...` </summary>
+
+  Run the following command:
+
+  ```bash
+  echo "export BROWSER='\"/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe\"'" >> ~/.zshrc
+  ```
+
+  Else run:
+
+  ```bash
+  echo "export BROWSER='\"/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe\"'" >> ~/.zshrc
   ```
 </details>
 
