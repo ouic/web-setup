@@ -1148,7 +1148,6 @@ You must pin:
 
 ## télécharger tous mes repositories d'un coup
 
-remplacer $USERNAME par votre nom d'utilisateur GitHub
 ```bash
 curl "https://api.github.com/users/$USERNAME/repos?page=$PAGE&per_page=100" | 
   grep -e 'git_url*' |
