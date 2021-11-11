@@ -576,6 +576,7 @@ To be sure that you can interact with your browser installed on Windows from you
 
   ```bash
   ls /mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe
+  echo "export BROWSER='\"/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe\"'" >> ~/.zshrc
   ```
 </details>
 
