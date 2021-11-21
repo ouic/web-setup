@@ -698,7 +698,7 @@ If you already generated keys that you already use with other services, you can 
 Open a terminal and copy-paste this command, replacing the email with **yours** (the same one you used to create your GitHub account).
 
 ```bash
-export EMAIL_ADDRESS=`eric.pinto@hotmail.fr`
+export EMAIL_ADDRESS="eric.pinto@hotmail.fr"
 echo $EMAIL_ADDRESS
 ```
 
