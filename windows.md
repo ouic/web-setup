@@ -698,11 +698,9 @@ If you already generated keys that you already use with other services, you can 
 Open a terminal and copy-paste this command, replacing the email with **yours** (the same one you used to create your GitHub account).
 
 ```bash
-export EMAIL_ADDRESS="eric.pinto@hotmail.fr"
-echo $EMAIL_ADDRESS
-```
-
-```bash
+echo 'enter your e-mail address below :'
+echo ' '
+read EMAIL_ADDRESS
 mkdir -p ~/.ssh && ssh-keygen -t ed25519 -o -a 100 -f ~/.ssh/id_ed25519 -C $EMAIL_ADDRESS
 ```
 
