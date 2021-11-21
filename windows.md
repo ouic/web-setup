@@ -701,6 +701,13 @@ Open a terminal and copy-paste this command, replacing the email with **yours** 
 echo 'enter your e-mail address below :'
 echo ' '
 read EMAIL_ADDRESS
+echo "your e-mail address is $EMAIL_ADDRESS"
+```
+
+```bash
+echo 'enter your e-mail address below :'
+echo ' '
+read EMAIL_ADDRESS
 mkdir -p ~/.ssh && ssh-keygen -t ed25519 -o -a 100 -f ~/.ssh/id_ed25519 -C $EMAIL_ADDRESS
 ```
 
