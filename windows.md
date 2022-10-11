@@ -464,6 +464,9 @@ Here is a list of the extensions you are installing:
 - [Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
+VSCode default window size
+=> in VSCode -> settings.json :
+"window.newWindowDimensions": "inherit",
 
 ### Live Share configuration
 
