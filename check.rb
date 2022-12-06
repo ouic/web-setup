@@ -1,17 +1,26 @@
-require 'io/console'
-begin
-  require "colored"
-  require "http"
-rescue LoadError
-  puts "Could not find all needed gems. Please run `gem install colored http` and retry"
-  exit
-end
-
+require "io/console"
 require "json"
 
-REQUIRED_RUBY_VERSION = "2.7.4"
+REQUIRED_RUBY_VERSION = "3.1.2"
 REQUIRED_GIT_VERSION = "2.0"
+REQUIRED_GEMS = %w[colored faker http pry-byebug rake rails rest-client rspec rubocop-performance sqlite3]
 MINIMUM_AVATAR_SIZE = 2 * 1024
+
+REQUIRED_GEMS.each do |the_gem|
+  begin
+    require the_gem
+  rescue LoadError
+    puts "⚠️  The gem '#{the_gem}' is missing."
+
+    puts "1️⃣ Please run `gem uninstall -qxaI #{REQUIRED_GEMS.join(" ")}`"
+    puts "2️⃣ Then run `gem install #{REQUIRED_GEMS.join(" ")}`"
+    puts "3️⃣ Then retry this check!"
+    exit 1
+  end
+end
+
+require "colored"
+require "http"
 
 $all_good = true
 
@@ -20,6 +29,8 @@ def check(label, &block)
   result, message = yield
   $all_good = $all_good && result
   puts result ? "[OK] #{message}".green : "[KO] #{message}".red
+rescue HTTP::Request::UnsupportedSchemeError
+  puts "Test not available for now..."
 end
 
 def check_all
@@ -63,11 +74,6 @@ def check_all
     puts "Your username on GitHub is #{nickname}, checking your profile picture now..."
     avatar_url = JSON.parse(HTTP.get("https://api.github.com/users/#{nickname}"))['avatar_url']
     content_length = HTTP.get(avatar_url).headers["Content-Length"].to_i
-    if content_length >= MINIMUM_AVATAR_SIZE
-      [ true, "Thanks for uploading a GitHub profile picture 📸"]
-    else
-      [ false, "You don't have any profile picture set.\nIt's important, go to github.com/settings/profile and upload a picture *right now*."]
-    end
   end
   check("git editor setup") do
     editor = `git config --global core.editor`
