@@ -687,6 +687,8 @@ Then run the following configuration line:
 
 ```bash
 gh config set git_protocol ssh
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
 ```
 
 
